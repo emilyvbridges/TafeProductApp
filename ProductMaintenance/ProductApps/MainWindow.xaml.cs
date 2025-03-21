@@ -35,10 +35,12 @@ namespace ProductApps
                 cProduct.calTotalPayment();
 
                 decimal totalPayment = cProduct.TotalPayment;
-                decimal totalCharge = totalPayment + 25; 
+                decimal totalCharge = totalPayment + 25;
+                decimal totalChargeWrap = totalCharge + 5;
 
                 totalPaymentTextBlock.Text = Convert.ToString(cProduct.TotalPayment);
                 totalChargeTextBox.Text = totalCharge.ToString();
+                totalChargeWrapTextBox.Text = totalChargeWrap.ToString();
             }
             catch (FormatException)
             {
